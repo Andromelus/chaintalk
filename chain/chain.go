@@ -1,23 +1,25 @@
 package chain
 
-import "fmt"
-import block "florianc/block"
-//import tx_pool "florianc/tx_pool"
+import (
+	block "florianc/chaintalk/block"
+	"florianc/chaintalk/txpool"
+	"fmt"
+)
 
-
-
+// Init : Initiate chain
 func Init() {
 	fmt.Println("Initiating chain")
+	txpool.Init()
 
 }
 
+// Mine : Mine a block
 func Mine() {
 	createNewBlock()
 }
 
-
-func createNewBlock(){
+func createNewBlock() {
 	nBlock := new(block.Block)
-	nBlock.Id = 1
-	fmt.Println("created new block: Number ", nBlock.Id)
+	nBlock.ID = 1
+	fmt.Println("created new block: Number ", nBlock.ID)
 }

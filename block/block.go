@@ -1,10 +1,9 @@
 package block
 
-import tx "florianc/tx"
-
+import tx "florianc/chaintalk/tx"
 
 type Block struct {
-	Id int
+	ID   int
 	Hash string
-	Txs []tx.Tx
+	Txs  []tx.Tx
 }

@@ -1,5 +1,7 @@
 package tx
 
+// Tx : transaction structure
 type Tx struct {
-	hash string
+	Hash    string
+	Message string
 }
